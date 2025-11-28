@@ -1,0 +1,25 @@
+{
+    "name": "speed",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "."
+    },
+
+    "remoteUser": "user",
+    "workspaceFolder": "/home/user",
+
+    // Forwarded ports
+    "forwardPorts": [1024],
+
+    // Custom settings for vscode
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "tomoki1207.pdf"
+            ],
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash"
+            }
+        }
+    }
+}

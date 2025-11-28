@@ -44,7 +44,10 @@ RUN sed -i 's|^METIS_LD_FLAGS.*|METIS_LD_FLAGS = -L/usr/lib/x86_64-linux-gnu -lm
 RUN make
 ENV PATH="${HOME}/speed:${PATH}"
 
-
 # Download the test cases
 WORKDIR ${HOME}
 RUN git clone https://bitbucket.org/ilmaz/speed-tutorials.git
+
+# Donwload the support scripts
+WORKDIR ${HOME}
+RUN git clone git@github.com:twinfall-repo/speed-repo.git

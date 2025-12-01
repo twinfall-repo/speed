@@ -92,6 +92,7 @@ def plot_monitors(
 
     for i in range(1, num_mon + 1):
         filename = padded_name(i)
+        print(f"Plotting monitor file: {filename}")
         filepath = monitors_path / filename
 
         if not filepath.exists():
@@ -154,6 +155,8 @@ def plot_monitors(
         plt.xlabel("t (s)")
         plt.ylabel("u_z (m)")
         plt.legend(["SEM"])
+
+        plt.savefig(monitors_path / f"{filename}_displacement.png", dpi=150)
 
     # Show all figures
     plt.show()
